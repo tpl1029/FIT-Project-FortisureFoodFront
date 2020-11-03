@@ -101,11 +101,10 @@
 }
 
 .welcome-grid>img{
-    height: 300 px;
-    width: 550px;
+    height: 600 px;
+    width: 1100px;
     padding-top: 50px;
-    margin-left: 500px;
-    margin-right: 200px
+    padding-left: 475px
     ;
 }
 
@@ -222,7 +221,7 @@
     grid-row: 5;
     grid-template-columns: 275px 250px auto;
     grid-template-rows: 1;
-    column-gap: 550px;
+    /* column-gap: 550px; */
     border-top: 1px solid gray ;
 }
 
@@ -238,4 +237,6 @@ margin-left: 5px;
     grid-column: 2;
     margin-top: 10px;
     margin-bottom: auto;
+    margin-left: auto;
+    margin-right: -300px;
 }
