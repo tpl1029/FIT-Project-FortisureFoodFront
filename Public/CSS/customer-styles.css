@@ -66,6 +66,7 @@
     padding-top: 5px;
     padding-left: 5px;
     column-gap: 10px;
+    border-bottom: 1px solid gray ;
     }
 
 .nav-button0{
@@ -97,14 +98,14 @@
     grid-row: 3;
     grid-template-columns: 400px auto;
     grid-template-rows: auto;
-    border-top: 1px solid gray ;
+    
 }
 
 .welcome-grid>img{
-    height: 600 px;
-    width: 1100px;
+    height: 700 px;
+    width: 1400px;
     padding-top: 50px;
-    padding-left: 475px
+    padding-left: 700px
     ;
 }
 
@@ -237,6 +238,74 @@ margin-left: 5px;
     grid-column: 2;
     margin-top: 10px;
     margin-bottom: auto;
-    margin-left: auto;
-    margin-right: -300px;
+    margin-left: 650px;
+    width: 150px;
+}
+
+.info-grid{
+    grid-row: 3;
+    grid-column: 1;
+    display: grid;
+    grid-template-columns: 400px auto;
+    grid-template-rows: 4;
+    border-bottom: 1px solid gray;
+}
+
+
+.info-header {
+    grid-column: 1;
+    grid-row: 1;
+    padding-top: 5px;
+}
+
+.info-bronze {
+    grid-column: 1;
+    grid-row: 2;
+    padding-top: 50px;
+}
+
+.info-silver {
+    grid-column: 1;
+    grid-row: 3;
+    padding-top: 50px;
+}
+
+.info-gold {
+    grid-column: 1;
+    grid-row: 4;
+    padding-top: 50px;
+}
+
+.card-bronze {
+    grid-column: 2;
+    grid-row: 1;
+    width: 300px;
+    height: 150px;
+    margin-left: 500px;
+    
+}
+
+.form-grid {
+    display: grid;
+    grid-column: 1;
+    grid-row: 4;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto;
+}
+
+.form-message {
+    grid-column: 1/2;
+    grid-row: 1;
+    margin-left: 700px;
+    padding-top: 10px;
+    
+}
+
+.form-content {
+    grid-column: 1;
+    grid-row: 2;
+    width: 500px;
+    margin-left: 700px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
