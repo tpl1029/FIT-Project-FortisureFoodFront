@@ -54,6 +54,7 @@
 
             </div>
         <!-- Products -->
+        
 
 <!-- Footer -->
 <?php
