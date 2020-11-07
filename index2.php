@@ -1,70 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- meta tags -->
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- meta tags -->
-
-    <!-- Links -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href= "./Public/CSS/customer-styles.css">
-    
-    <!-- Links -->
-
-        <!-- Scripts -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <!-- Scripts -->
-
-
-    <title>Fortisure Food Front</title>
-</head>
-    
-<body>
-    <div class="page-grid">
-        <!-- Header -->
-            <div class="header-grid">
-                <div class="header-logo">
-                    <h1 style="color: blue; font-weight: bold;"> Fortisure 
-                        <span style = color:red>Food </span></h1>
-                    <h1 style="padding-left: 85px; color: blue; font-weight: bold;">Front</h1>
-                    
-                </div>
-
-                <div class="header-image">
-                    <div class="header-location">
-                        <p> Current Store:</p>
-                        <p>Akron</p>
-                    </div>
-                    <button class=" header-button btn btn-success" >Sign In</button>
-                </div>
-
-            </div>
-        <!-- Header -->
-
-        <!-- Navbar -->
-            <div class="navbar-grid">
-                <a href="http://localhost/FIT-Web-Course/Project1/FIT-Project-FortisureFoodFront/index.html" class="nav-button0 btn btn-success">Home</a> 
-                <a href="" class="nav-button1 btn btn-success">Shop Online</a> 
-                <a href="http://localhost/FIT-Web-Course/Project1/FIT-Project-FortisureFoodFront/index2.html" class="nav-button2 btn btn-success">Join Our Rewards Program!</a> 
-                <a href="" class="nav-button3 btn btn-success">Store Departments</a>
-            
-            </div>
-           
-        <!-- Navbar-->
+<?php
+    // Header and Navbar
+    include './View/header.php';
+    include './View/navbar.php';
+    // Header and Navbar
+?>
         
         <!-- Rewards Details -->
             <div class="info-grid">
                 <div class="info-header">
                     <h1> Join Our Rewards Program Today! </h1>
                     <p class="info-bronze"> Our Bronze level is $10 a month and entitles the card holder to 5% off of all purchases.</p>
-                    <img src="./Public/Images/bronze-card.jpg" class="card-bronze">
+                    <img src="./View/Public/Images/bronze-card.jpg" class="card-bronze">
                     <p class="info-silver"> Our Silver level is $20 a month and entitles the card holder to 10% off of all purchases and a chance to win free groceries for a year.</p>
-                    <img src="./Public/Images/silver-card.jpg" class="card-silver">
+                    <img src="./View/Public/Images/silver-card.jpg" class="card-silver">
                     <p class="info-gold"> Our Gold level is $30 a month and entitles the card holder to 15% off of all purchases, a chance to win free groceries for a year, and free home delivery.</p>
-                    <img src="./Public/Images/gold-card.jpg" class="card-gold">
+                    <img src="./View/Public/Images/gold-card.jpg" class="card-gold">
                 </div>
 
             </div>
@@ -115,12 +65,13 @@
             </div>
         <!-- Form -->
 
-        <!-- Footer -->
-            <div class="footer-grid">
-                 <p class="footer-text">Copyright 2020 Fortisure Food Front</p>
-                <button class="footer-button btn btn-success">Contact Us!</button> 
-            </div>
-        <!-- Footer -->
+<!-- Footer -->
+        <?php
+
+include './View/footer.php';
+
+?>
+<!-- Footer -->
 
 
     </div>
