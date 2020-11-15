@@ -8,6 +8,15 @@
     {
 
         echo "
+                <!-- Internal Style -->
+                <style> .product-card-price{             
+                    grid-row: 3;
+                    margin-left: 55px;
+                    color: green;  
+                    }
+                </style>
+            <!-- Internal Style -->
+            
             <div class='product-card-grid' 
             style='grid-column: {$colNum}; grid-row: 2;'>
                 <img src='./View/Public/Images/{$bestSellers[$index][0]}.jpg'>

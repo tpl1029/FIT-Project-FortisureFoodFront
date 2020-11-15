@@ -24,14 +24,7 @@
     
 <body>
     
-    <!-- Internal Style -->
-        <style> .card-price{             
-            text-align: center;
-            padding-top: 8px;
-            color: green;
-            }
-        </style>
-    <!-- Internal Style -->
+
 
     <div class="page-grid" >
         <!-- Header -->
