@@ -24,37 +24,32 @@
         <!-- Welcome -->
 
         <!-- Products -->
-            <div class="sellers-grid">
-             <h1 class="sellers-text"> Best Sellers: </h1>
+            <div class="trending-container-grid">
+             <h1> Best Sellers: </h1>
+            
+             <?php 
+                    //creating array for the coupon loop
+                    $bestSellers = array (
 
-             <div class="product-card-one-grid">
-                <img src="./View/Public/Images/milk.jpeg">                   
-                <p class="card-text">Whole Milk</p>
-                <p class="card-price">See Price</p>
-            </div>
+                        array("milk", "Whole Milk", "See Price"),
 
-               <div class="product-card-two-grid">
-                <img src="./View/Public/Images/bread.jpg">                   
-                <p class="card-text">Italian Bread</p>
-                <p class="card-price">See Price</p>
-               </div>
+                        array("bread", "Italian Bread", "See Price"),
 
-               <div class="product-card-three-grid">
-                <img src="./View/Public/Images/carrots.jpg">                   
-                <p class="card-text">Bag of Carrots</p>
-                <p class="card-price">See Price</p>
-               </div> 
+                        array("carrots", "Bag of Carrots", "See Price")                       
+                    );
 
-            <div class="deal-card">
-               <p class="deal-text"> Deal of the Week</p>
-               <img src="./View/Public/Images/ground-beef.jpeg">
-               <p class="deal-text">Enjoy a 15% discount off of all Ground Beef.</p>
-
-            </div>
+                    include './Controller/product-cards.php';          
+                ?>
+                <div class="deal-card">
+                    <p class="deal-header"> Deal of the Week</p>
+                    <img src="./View/Public/Images/ground-beef.jpeg">
+                    <p class="deal-details">Enjoy a 15% discount off of all Ground Beef.</p>
+                </div>
 
             </div>
         <!-- Products -->
-        
+
+
 
 <!-- Footer -->
 <?php

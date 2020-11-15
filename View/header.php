@@ -39,8 +39,7 @@
                 <div class="header-logo">
                    <!-- Inline Style --> <h1 style="color: blue; font-weight: bold;"> Fortisure 
                         <span style = color:red>Food </span></h1>
-                    <h1 style="padding-left: 85px; color: blue; font-weight: bold;">Front</h1>
-                    
+                    <h1 style="padding-left: 85px; color: blue; font-weight: bold;">Front</h1>                    
                 </div>
 
                 <div class="header-image">
@@ -52,4 +51,5 @@
                 </div>
 
             </div>
+    
         <!-- Header -->
