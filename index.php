@@ -2,6 +2,16 @@
 <?php
     include './View/header.php';
     include './View/navbar.php';
+    include './Controller/db_conn.php';
+    include './Controller/product-cards.php';
+    include './Model/query-products.php';
+
+    $database = new Database();
+    $db = $database->connect();
+    
+    $product = new Product($db);
+
+    $productGet = $product->prodRead();
 ?>
 <!-- Header and Navbar -->
 
@@ -26,20 +36,27 @@
         <!-- Products -->
             <div class="trending-container-grid">
              <h1> Best Sellers: </h1>
-            
+             
              <?php 
-                    //creating array for the coupon loop
-                    $bestSellers = array (
 
-                        array("milk", "Whole Milk", "See Price"),
+                $colNum = 1;
 
-                        array("bread", "Italian Bread", "See Price"),
+                    while ($row = $productGet->fetch(PDO::FETCH_ASSOC)) {
+                        // variables
+                        $prodID = $row['ProductID'];
+                        $prodType = $row['ProductType'];
+                        $prodName = $row['ProductName'];
+                        $prodDesc = $row['ProductDescription'];
+                        $prodPrice = $row['UnitPrice'];     
+                        $prodImage = $row['ProductImage'];                    
+                        // variables
 
-                        array("carrots", "Bag of Carrots", "See Price")                       
-                    );
+                        makeProductCard($prodID, $prodType, $prodName,  $prodDesc,  $prodPrice, $prodImage, $colNum);
+                        $colNum++;
+                    }
+            ?>
+            
 
-                    include './Controller/product-cards.php';          
-                ?>
                 <div class="deal-card">
                     <p class="deal-header"> Deal of the Week</p>
                     <img src="./View/Public/Images/ground-beef.jpeg">

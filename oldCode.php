@@ -23,6 +23,52 @@
                <p class="deal-text">Enjoy a 15% discount off of all Ground Beef.</p>
 
             </div> -->
+            <?php 
+                    //creating array for the coupon loop
+                    // $bestSellers = array (
+
+                    //     array("milk", "Whole Milk", "See Price"),
+
+                    //     array("bread", "Italian Bread", "See Price"),
+
+                    //     array("carrots", "Bag of Carrots", "See Price")                       
+                    // );
+
+                    // include './Controller/product-cards.php';          
+                // ?>
+
+            
+
+    <!-- //setting the column variable as the first column is 2
+    $colNum = 1;
+
+    //loop to print each coupon in array
+    for($index = 0; $index < count($bestSellers); $index++)
+    {
+
+        echo "
+                Internal Style
+                <style> .product-card-price{             
+                    grid-row: 3;
+                    margin-left: 55px;
+                    color: green;  
+                    }
+                </style>
+            Internal Style
+            
+            <div class='product-card-grid' 
+            style='grid-column: {$colNum}; grid-row: 2;'>
+                <img src='./View/Public/Images/{$bestSellers[$index][0]}.jpg'>
+                <p class = 'product-card-desc'>{$bestSellers[$index][1]}</p>
+                <p class = 'product-card-price'>{$bestSellers[$index][2]}</p>
+                </button>
+            </div>
+        ";
+        // increment column num
+        $colNum++;
+    }
+ -->
+
 
             .sellers-grid {
             grid-column: 1;

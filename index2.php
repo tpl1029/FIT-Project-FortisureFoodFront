@@ -25,16 +25,16 @@
                 <h1 class="form-message"> Sign Up Below</h1>
                 <form class="form-content" method="post" action=""  >
                     <label>First Name:</label><br>
-                    <input type="text" class="form-control" placeholder="John" name="firstname">
+                    <input type="text" class="form-control" placeholder="John" name="firstname" id="firstname">
                     <label>Last Name:</label><br>
-                    <input type="text" class="form-control" placeholder="Smith" name="lastname">
+                    <input type="text" class="form-control" placeholder="Smith" name="lastname" id="lastname">
                     <label>Address:</label><br>
-                    <input type="text" class="form-control" placeholder="123 Generic St." name="address">
+                    <input type="text" class="form-control" placeholder="123 Generic St." name="address" id="address">
                     <label>City:</label><br>
-                    <input type="text" class="form-control" name="city">
+                    <input type="text" class="form-control" name="city" id="city">
                     <label>State:</label><br>
                     <!-- <div class="custom-select"> -->
-                    <select class="form-control" name="state">
+                    <select class="form-control" name="state" id="state">
                         <option> Ohio </option>
                         <option> Pennsylvania </option>
                         <option> Michigan </option>
@@ -43,22 +43,22 @@
                     </select> <br>
                     <!-- </div> -->
                     <label>Zip:</label><br>
-                    <input type="text" class="form-control" name="zip"> <!--Bootstrap form-control class--> 
+                    <input type="text" class="form-control" name="zip" id="zip"> <!--Bootstrap form-control class--> 
                     <label>Phone:</label><br>
-                    <input type="tel" class="form-control" name="phone">
+                    <input type="tel" class="form-control" name="phone" id="phone">
                     <label>Email:</label><br>
-                    <input type="email" class="form-control" placeholder="example@email.com" name="email"> <br>
+                    <input type="email" class="form-control" placeholder="example@email.com" name="email" id="email"> <br>
                     <label> Please Select  A Program Level:</label> <br>
                     <label>Bronze</label>
-                    <input type="radio" name="level_1" value="Bronze">
+                    <input type="radio" name="level_1" id="level_1" value="Bronze">
                     <label>Silver</label>
-                    <input type="radio" name="level_2" value="Silver">
+                    <input type="radio" name="level_2" id="level_2" value="Silver">
                     <label>Gold</label>
-                    <input type="radio" name="level_3" value="Gold"> <br> <br>
+                    <input type="radio" name="level_3" value="Gold" id="level_3"> <br> <br>
                     <label>Additional Comments</label><br>
-                    <textarea type="textarea" class="form-control" placeholder="Type Here" name="comments"></textarea>
+                    <textarea type="textarea" class="form-control" placeholder="Type Here" name="comments" id="comments"></textarea>
                     <br>
-                    <input type="submit" class=" btn-contact-us btn btn-primary" data-toggle="tooltip" data-placement="right" 
+                    <input type="submit" class=" btn-contact-us btn btn-primary" name='submit-contact-form' data-toggle="tooltip" data-placement="right" 
                     title="Submit the Form" value="Submit"> <!--Bootstrap btn class and Bootstrap tool tip--> 
                    <?php include './Controller/form-submit.php' ?>
                 </form>

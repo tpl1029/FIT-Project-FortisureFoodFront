@@ -1,42 +1,70 @@
 <?php
 
-//check that post items are set
-if(isset($_POST['firstname']))
+//check to see if the customer creation from was just submitted
+if (isset($_POST['submit-contact-form'])) {
+    require './Model/query-customer.php';
 
-{
+  // Used to remove special encoded characters
+  // https://www.w3schools.com/php/filter_sanitize_string.asp
+  $POST = filter_var_array($_POST, FILTER_SANITIZE_STRING);
 
-    //display alert to thank customer
-    echo "
-    
-        <script>
-        
-          alert('Thank you {$_POST['firstname']} for signing up!.' +
-                'You will receive a confirmation email shortly!');
+  // Variables
+    // Customer Contact Info
+      // Trim removes spaces around data example: ' nameHere ' TO-> 'nameHere'
+      // htmlentities changes special character like: 
+        // '&' TO '&amp;'
+        // '<' TO '&lt;'
+        // '"' TO '&quot;'
+      // and by adding single quotes around the entire string
+      // which this helps protect against SQL injection attacks
+      $firstName = trim(htmlentities($POST['firstName']));
+      $lastName = trim(htmlentities($POST['lastName']));
+      $address = trim(htmlentities($POST['address']));
+      $city = trim(htmlentities($POST['city']));
+      $state = trim(htmlentities($POST['state']));
+      $postalCode = trim(htmlentities($POST['zip']));
+      $phone = trim(htmlentities($POST['phone']));
+      $email = trim(htmlentities($POST['email']));
+      $level1 = trim(htmlentities($POST['level_1']));
+      $level2 = trim(htmlentities($POST['level_2']));
+      $level3 = trim(htmlentities($POST['level_3']));
+      $comments = trim(htmlentities($POST['comments']));
+    // Customer Contact Info
+  // Variables
+  
+  // Customer array & db insert
+    /* 
+      Creates an array that stores gathered information from the form
+      and send that array to the query-customer.php page to insert to db
+    */
+      $customerData = [
+        "firstName" => $firstName,
+        "lastName" => $lastName,
+        "address" => $address,
+        "city" => $city,
+        "state" => $state,
+        "postalCode" => $postalCode,
+        "country" => $phone,
+        "email" => $email,
+        "level1" => $level1,
+        "level2" => $level2,
+        "level3" => $level3,
+        "comments" => $comments
+      ];
+    // Customer Info Array
 
-        </script>   
+    // Insert info to db
+      $customer = new Customer($db);
+      $customerPurchaseId = $customer->addCustomer($customerData);
+    // Insert info to db
+  // Customer array & db insert  
 
-        ";
-
-
-        //database interaction
-
-
-        //finally we clear out data in post
-        unset($_POST['firstname']);
-        unset($_POST['lastname']);
-        unset($_POST['address']);
-        unset($_POST['city']);
-        unset($_POST['state']);
-        unset($_POST['zip']);
-        unset($_POST['phone']);
-        unset($_POST['email']);
-        unset($_POST['level_1']);
-        unset($_POST['level_2']);
-        unset($_POST['level_3']);
-        unset($_POST['comments']);
-
+  //display an alert thanking the customer for their account creations
+  echo "
+  <script>        
+      alert('Thank you {$firstName} {$lastName} for creating an account. You will recieve an email confirmation shortly! ');
+  </script>";
+ 
 }
-
-
 
 ?>
