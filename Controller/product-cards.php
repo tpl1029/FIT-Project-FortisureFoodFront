@@ -17,7 +17,7 @@ function makeProductCard($prodID, $prodType, $prodName,  $prodDesc,  $prodPrice,
     style='grid-column: {$colNum}; grid-row: 2;'>
         <img src='./View/Public/Images/{$prodImage}.jpg'>
         <p class = 'product-card-desc'>{$prodName}</p>
-        <p class = 'product-card-price'>Price: {$prodPrice}</p>
+        <p class = 'product-card-price'>Price: \${$prodPrice}</p>
         </button>
     </div>
 ";

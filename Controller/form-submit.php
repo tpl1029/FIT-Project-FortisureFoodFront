@@ -25,10 +25,8 @@ if (isset($_POST['submit-contact-form'])) {
       $postalCode = trim(htmlentities($POST['zip']));
       $phone = trim(htmlentities($POST['phone']));
       $email = trim(htmlentities($POST['email']));
-      $level1 = trim(htmlentities($POST['level_1']));
-      $level2 = trim(htmlentities($POST['level_2']));
-      $level3 = trim(htmlentities($POST['level_3']));
-      $comments = trim(htmlentities($POST['comments']));
+      $level = trim(htmlentities($POST['level']));
+      // $comments = trim(htmlentities($POST['comments']));
     // Customer Contact Info
   // Variables
   
@@ -44,27 +42,30 @@ if (isset($_POST['submit-contact-form'])) {
         "city" => $city,
         "state" => $state,
         "postalCode" => $postalCode,
-        "country" => $phone,
+        "phone" => $phone,
         "email" => $email,
-        "level1" => $level1,
-        "level2" => $level2,
-        "level3" => $level3,
-        "comments" => $comments
+        "level" => $level,
+          // "comments" => $comments
       ];
     // Customer Info Array
 
     // Insert info to db
       $customer = new Customer($db);
       $customerPurchaseId = $customer->addCustomer($customerData);
+      $customerReward =$customer->addRewards($customerData);
+      $customerState =$customer->addState($customerData);
     // Insert info to db
   // Customer array & db insert  
 
   //display an alert thanking the customer for their account creations
   echo "
-  <script>        
-      alert('Thank you {$firstName} {$lastName} for creating an account. You will recieve an email confirmation shortly! ');
+  <script>       
+      
+  alert('Thank you {$firstName} {$lastName} for signing up. You selected the {$level} level. You will recieve an email confirmation shortly! ');
+  history.pushState({}, '', '');
   </script>";
- 
+
+   
 }
 
 ?>

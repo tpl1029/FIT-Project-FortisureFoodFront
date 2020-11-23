@@ -40,7 +40,8 @@
                         <p> Current Store:</p>
                         <p>Akron</p>
                     </div>
-                    <button class=" header-button btn btn-success" >Sign In</button>
+                    <a href="http://localhost/FIT-Web-Course/FIT-Project-FortisureFoodFront/loginpage.php" class=" header-button btn btn-success" id="login" style="display: visible">Login</a>
+                    <a href="http://localhost/FIT-Web-Course/FIT-Project-FortisureFoodFront/loginpage.php" class=" header-button btn btn-success" id="logout" style="display: none">Logout</a>
                 </div>
 
             </div>

@@ -1,7 +1,13 @@
 <?php
     // Header and Navbar
+    include './Controller/login_button.php';
     include './View/header.php';
     include './View/navbar.php';
+    include './Controller/db_conn.php';
+
+    $database = new Database();
+    $db = $database->connect();
+
     // Header and Navbar
 ?>
         
@@ -25,9 +31,9 @@
                 <h1 class="form-message"> Sign Up Below</h1>
                 <form class="form-content" method="post" action=""  >
                     <label>First Name:</label><br>
-                    <input type="text" class="form-control" placeholder="John" name="firstname" id="firstname">
+                    <input type="text" class="form-control" placeholder="John" name="firstName" id="firstName">
                     <label>Last Name:</label><br>
-                    <input type="text" class="form-control" placeholder="Smith" name="lastname" id="lastname">
+                    <input type="text" class="form-control" placeholder="Smith" name="lastName" id="lastName">
                     <label>Address:</label><br>
                     <input type="text" class="form-control" placeholder="123 Generic St." name="address" id="address">
                     <label>City:</label><br>
@@ -50,14 +56,14 @@
                     <input type="email" class="form-control" placeholder="example@email.com" name="email" id="email"> <br>
                     <label> Please Select  A Program Level:</label> <br>
                     <label>Bronze</label>
-                    <input type="radio" name="level_1" id="level_1" value="Bronze">
+                    <input type="radio" name="level" id="level" value="Bronze">
                     <label>Silver</label>
-                    <input type="radio" name="level_2" id="level_2" value="Silver">
+                    <input type="radio" name="level" id="level" value="Silver">
                     <label>Gold</label>
-                    <input type="radio" name="level_3" value="Gold" id="level_3"> <br> <br>
-                    <label>Additional Comments</label><br>
+                    <input type="radio" name="level" id="level" value="Gold"> <br> <br>
+                    <!-- <label>Additional Comments</label><br>
                     <textarea type="textarea" class="form-control" placeholder="Type Here" name="comments" id="comments"></textarea>
-                    <br>
+                    <br> -->
                     <input type="submit" class=" btn-contact-us btn btn-primary" name='submit-contact-form' data-toggle="tooltip" data-placement="right" 
                     title="Submit the Form" value="Submit"> <!--Bootstrap btn class and Bootstrap tool tip--> 
                    <?php include './Controller/form-submit.php' ?>
