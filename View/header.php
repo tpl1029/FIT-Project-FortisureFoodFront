@@ -41,7 +41,7 @@
                         <p>Akron</p>
                     </div>
                     <a href="http://localhost/FIT-Web-Course/FIT-Project-FortisureFoodFront/loginpage.php" class=" header-button btn btn-success" id="login" style="display: visible">Login</a>
-                    <a href="http://localhost/FIT-Web-Course/FIT-Project-FortisureFoodFront/loginpage.php" class=" header-button btn btn-success" id="logout" style="display: none">Logout</a>
+                    <a href="http://localhost/FIT-Web-Course/FIT-Project-FortisureFoodFront/Controller/logout.php" class=" header-button btn btn-success" id="logout" style="display: none">Logout</a>
                 </div>
 
             </div>

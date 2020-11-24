@@ -15,7 +15,23 @@ session_start();
     $_SESSION["user_password"] = trim(htmlentities($_POST['passwordInput']));
     $_POST = array();
     if ($_SESSION['user_password'] == $mypass){
-        echo "<script>            
+        echo "<script>
+            function login() {
+
+                var x = document.getElementById('logout');
+            if (x.style.display === 'none') {
+                x.style.display = 'block';
+            }
+            }
+            function logout() {
+        
+                var x = document.getElementById('login');
+            if (x.style.display === 'visible') {
+                x.style.display = 'none';
+            }
+            }  
+            login();
+            logout();            
                 document.getElementById('form-sub-message').innerHTML= 'Hello: {$_SESSION['user_name']}'; 
             </script>";
         // $_SESSION['loggedIn'] = true;

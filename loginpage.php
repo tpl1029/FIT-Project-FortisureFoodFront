@@ -1,5 +1,4 @@
-<?php
-    
+<?php    
     include './View/header.php';
     include './View/navbar.php';
     include './Controller/db_conn.php';

@@ -1,7 +1,7 @@
 <?php
     // Header and Navbar
+    include './Controller/login.php';    
     include './Controller/login_button.php';
-    include './View/header.php';
     include './View/navbar.php';
     include './Controller/db_conn.php';
 
