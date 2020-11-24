@@ -10,7 +10,7 @@ class Customer {
             $lastName = $data['lastName'];
             $address = $data['address'];
             $city = $data['city'];
-            $postalCode = $data['postalCode'];
+            $postalCode = $data['zip'];
             $phone = $data['phone']; 
             $email = $data['email']; 
                                   

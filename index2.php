@@ -8,6 +8,8 @@
     $database = new Database();
     $db = $database->connect();
 
+    include './Controller/ajax-function.php';
+    
     // Header and Navbar
 ?>
         
@@ -28,10 +30,12 @@
 
         <!-- Form -->
             <div class="form-grid">
-                <h1 class="form-message"> Sign Up Below</h1>
-                <form class="form-content" method="post" action=""  >
+            <h1 class="form-message"> Sign Up Below</h1>
+            <div class = "form-content" id="formid">
+                
+                
                     <label>First Name:</label><br>
-                    <input type="text" class="form-control" placeholder="John" name="firstName" id="firstName">
+                    <input type="text" class="form-control" placeholder="John" name="firstName" id="firstName" >
                     <label>Last Name:</label><br>
                     <input type="text" class="form-control" placeholder="Smith" name="lastName" id="lastName">
                     <label>Address:</label><br>
@@ -56,20 +60,34 @@
                     <input type="email" class="form-control" placeholder="example@email.com" name="email" id="email"> <br>
                     <label> Please Select  A Program Level:</label> <br>
                     <label>Bronze</label>
-                    <input type="radio" name="level" id="level" value="Bronze">
+                    <input type="radio" name="level" class="level" value="Bronze">
                     <label>Silver</label>
-                    <input type="radio" name="level" id="level" value="Silver">
+                    <input type="radio" name="level" class="level" value="Silver">
                     <label>Gold</label>
-                    <input type="radio" name="level" id="level" value="Gold"> <br> <br>
+                    <input type="radio" name="level" class="level" value="Gold"> <br> <br>
                     <!-- <label>Additional Comments</label><br>
                     <textarea type="textarea" class="form-control" placeholder="Type Here" name="comments" id="comments"></textarea>
                     <br> -->
                     <input type="submit" class=" btn-contact-us btn btn-primary" name='submit-contact-form' data-toggle="tooltip" data-placement="right" 
-                    title="Submit the Form" value="Submit"> <!--Bootstrap btn class and Bootstrap tool tip--> 
-                   <?php include './Controller/form-submit.php' ?>
-                </form>
-
+                    title="Submit the Form" value="Submit"
+                    onclick="ajaxSubmit(document.getElementById('firstName').value,
+                                        document.getElementById('lastName').value,
+                                        document.getElementById('address').value,
+                                        document.getElementById('city').value,
+                                        document.getElementById('state').value,
+                                        document.getElementById('zip').value,
+                                        document.getElementById('phone').value,
+                                        document.getElementById('email').value,
+                                        $('.level:checked').val()   
+                                    )" > <!--Bootstrap btn class and Bootstrap tool tip--> 
+                       
+                   </div>          
             </div>
+
+            <p id ="success"></p>
+
+            <div></div>
+            
         <!-- Form -->
 
 <!-- Footer -->
