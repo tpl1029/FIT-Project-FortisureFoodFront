@@ -25,6 +25,10 @@
             border-right: 1px solid black;   
         }
 
+        .header-front{
+            padding-left: 85px;
+        }
+
         .header-image {
             display: grid;
             grid-row: 1;
@@ -225,43 +229,47 @@
                 margin-top: 5px;
                 margin-left: 45px;
             }
+
+            .product-card-price{
+                margin-left: 55px;
+            }
             
 
     /* Deal */
 
-    .deal-card {
-        grid-row: 1/2;
-        grid-column: 4;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows:  20px 200px 20px ;
-        width: 528px;
-        height: 250px;
-        box-shadow: 5px 4px 10px 0px rgba(0,0,0,0,45);
-        background-color: white;    
-        margin-top: 25px;
-        margin-bottom: 10px;
-        margin-left: 258px;
-        border: 1px solid black;
-    }
-    .deal-header {
-        grid-row: 1;
-        font-weight: bold;
-        font-size: 20px;
-        padding-left: 175px;
-    }
-    .deal-card img {
-        height: 150px;
-        width: 200px;
-        grid-row: 2;
-        margin-top: 10px;
-        margin-left: 150px;
-    }
+        .deal-card {
+            grid-row: 1/2;
+            grid-column: 4;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows:  20px 200px 20px ;
+            width: 528px;
+            height: 250px;
+            box-shadow: 5px 4px 10px 0px rgba(0,0,0,0,45);
+            background-color: white;    
+            margin-top: 25px;
+            margin-bottom: 10px;
+            margin-left: 258px;
+            border: 1px solid black;
+        }
+        .deal-header {
+            grid-row: 1;
+            font-weight: bold;
+            font-size: 20px;
+            padding-left: 175px;
+        }
+        .deal-card img {
+            height: 150px;
+            width: 200px;
+            grid-row: 2;
+            margin-top: 10px;
+            margin-left: 150px;
+        }
 
-    .deal-details {
-        grid-row: 3;
-        padding-left: 110px;
-    }
+        .deal-details {
+            grid-row: 3;
+            padding-left: 110px;
+        }
 
     /* Deal */
 
@@ -385,3 +393,319 @@
     }
 
 /* Login Page */
+
+/* Media Queries */
+    /* 1424px */
+        @media only screen and (max-width: 1424px){
+        .welcome-grid>img{
+            height: 350 px;
+            width: 700px;
+            padding-top: 50px;
+            padding-left: 235px
+            ;
+        }
+
+        .deal-card{
+            grid-row: 1/2;
+            grid-column: 4;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows:  20px 150px 20px ;
+            height: 250px;
+            width: 465px;        
+            box-shadow: 5px 4px 10px 0px rgba(0,0,0,0,45);
+            background-color: white;    
+            margin-top: 25px;
+            margin-bottom: 10px;
+            margin-left: 95px;
+            border: 1px solid black;
+        }
+        .deal-header {
+            grid-row: 1;
+            font-weight: bold;
+            font-size: 17px;
+            padding-left: 165px;
+            
+        }
+        .deal-card img {
+            height: 90px;
+            width: 160px;
+            grid-row: 2;
+            margin-top: 10px;
+            margin-left: 150px;
+        }
+
+        .deal-details {
+            grid-row: 3;
+            padding-left: 90px;
+        }
+
+        .trending-container-grid {
+            grid-row: 4;
+            grid-column: 1;
+            display: -ms-grid;
+            display: grid;
+            -ms-grid-columns: auto auto auto auto;
+                grid-template-columns: 175px 175px 175px auto;
+            -ms-grid-rows: auto auto;
+                grid-template-rows: 75px 200px;
+                column-gap: 5px;
+        }
+        
+        .trending-container-grid h1 {
+            -ms-grid-column: 1;
+            grid-column: 1;  
+            grid-row: 1;  
+            font-weight: normal;
+            font-size: 30px;
+            margin-left: 5px;
+        }    
+        .product-card-grid {
+            grid-row: 2;
+            grid-column: 1;
+            display: -ms-grid;
+            display: grid;
+            -ms-grid-columns: 1fr;
+                grid-template-columns: 153px;
+            -ms-grid-rows:  124px 30px 30px;
+                grid-template-rows: auto auto auto;            
+            border: 1px solid black;       
+            
+        }
+        .product-card-grid img {
+            grid-row: 1;
+            height: 100px;
+            width: 100px;
+            margin-left: 35px;       
+            }
+            
+        .product-card-desc {
+            grid-row: 2;               
+            margin-top: 5px;
+            margin-left: 45px;
+            }
+
+            .footer-button {
+                grid-row: 1;
+                grid-column: 2;
+                margin-top: 10px;
+                margin-bottom: auto;
+                margin-left: 300px;
+                width: 150px;
+            }
+        }
+    /* 1424px */
+
+    /* 1281px */
+        @media only screen and (max-width: 1281px){
+            .footer-button {
+                grid-row: 1;
+                grid-column: 2;
+                margin-top: 10px;
+                margin-bottom: auto;
+                margin-left: 250px;
+                width: 130px;
+            }
+        }
+  /* 1281px */
+
+  @media only screen and (max-width: 1116px){
+    .welcome-grid>img{
+        height: 250 px;
+        width: 500px;
+        padding-top: 50px;
+        padding-left: 235px
+        ;
+    }
+    .deal-card{
+        grid-row: 1/2;
+        grid-column: 4;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows:  10px 110px 10px ;
+        height: 150px;
+        width: 265px;        
+        box-shadow: 5px 4px 10px 0px rgba(0,0,0,0,45);
+        background-color: white;    
+        margin-top: 25px;
+        margin-bottom: 10px;
+        margin-left: 170px;
+        border: 1px solid black;
+    }
+    .deal-header {
+        grid-row: 1;
+        font-weight: bold;
+        font-size: 14px;
+        padding-left: 80px;
+        
+    }
+    .deal-card img {
+        height: 60px;
+        width: 110px;
+        grid-row: 2;
+        margin-top: 20px;
+        margin-left: 82px;
+    }
+
+    .deal-details {
+        grid-row: 3;
+        padding-left: 20px;
+        font-size: 12px;
+    }
+
+    .trending-container-grid {
+        grid-row: 4;
+        grid-column: 1;
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: auto auto auto auto;
+            grid-template-columns: 150px 150px 150px auto;
+        -ms-grid-rows: auto auto;
+            grid-template-rows: 65px 150px;
+            column-gap: 5px;
+    }
+    
+    .trending-container-grid h1 {
+        -ms-grid-column: 1;
+        grid-column: 1;  
+        grid-row: 1;  
+        font-weight: normal;
+        font-size: 20px;
+        margin-left: 5px;
+    }    
+    .product-card-grid {
+        grid-row: 2;
+        grid-column: 1;
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 1fr;
+            grid-template-columns: 153px;
+        -ms-grid-rows:  124px 30px 30px;
+            grid-template-rows: auto auto auto;            
+        border: 1px solid black;       
+        
+    }
+    .product-card-grid img {
+        grid-row: 1;
+        height: 75px;
+        width: 75px;
+        margin-left: 35px;       
+        }
+        
+    .product-card-desc {
+        grid-row: 2;               
+        margin-top: 5px;
+        margin-left: 45px;
+        font-size: 12px;
+        }
+
+        .product-card-price{             
+            grid-row: 3;
+            margin-left: 45px;
+            color: green;  
+            font-size: 12px;
+            
+            }
+
+        .footer-button {
+            grid-row: 1;
+            grid-column: 2;
+            margin-top: 10px;
+            margin-bottom: auto;
+            margin-left: 250px;
+            width: 100px;
+            font-size: 12px;
+        }
+        .header-grid {
+            grid-column: 1;
+            grid-row: 1;
+            display: grid;
+            grid-template-columns: 250px auto;
+            grid-template-rows: auto;
+            }    
+    
+    
+        .header-logo {
+            grid-row: 1;
+            grid-column: 1;
+            border-right: 1px solid black; 
+            font-size: 18px;             
+            }
+        .header-front{
+            font-size: 18px;
+        }
+    
+        .header-image {
+            display: grid;
+            grid-row: 1;
+            grid-column: 2;
+            grid-template-rows: auto auto;
+            grid-template-columns: auto auto 100px;
+            background-image: url("../Images/header4.PNG");
+            background-repeat: no-repeat;
+            background-size: cover;
+            max-width: 100%;
+            height: auto;
+            } 
+    
+    
+        .header-location {
+            grid-row: 1;
+            grid-column: 1;
+            grid-template-columns: 100px;
+            font-weight: bold;
+                
+            }
+    
+        .header-button {
+            grid-row: 2;
+            grid-column: 3;            
+            width: 85px;
+            font-size: 12px;
+            margin-right: 30px;
+            
+            }       
+
+        .navbar-grid {
+            display: grid;
+            grid-column: 1;
+            grid-row: 2;
+            grid-template-columns: auto auto auto auto auto;
+            grid-template-rows: 1;
+            position: sticky;
+            padding-top: 5px;
+            padding-left: 5px;
+            column-gap: 10px;
+            border-bottom: 1px solid gray ;
+            
+            }
+    
+        .nav-button0{
+            grid-row: 1;
+            grid-column: 1;
+            font-size: 12px;
+            }
+    
+        .nav-button1{
+            grid-row: 1;
+            grid-column: 2;
+            font-size: 12px;
+                
+        }
+    
+        .nav-button2 {
+            grid-row: 1;
+            grid-column: 3;
+            font-size: 12px;
+                
+         }
+    
+        .nav-button3 {
+            grid-row: 1;
+            grid-column: 4;
+            font-size: 12px;
+                
+            }
+    }
+
+/* Media Queries */

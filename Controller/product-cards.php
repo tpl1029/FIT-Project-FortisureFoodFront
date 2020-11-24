@@ -6,8 +6,7 @@ function makeProductCard($prodID, $prodType, $prodName,  $prodDesc,  $prodPrice,
         echo "
         <!-- Internal Style -->
         <style> .product-card-price{             
-            grid-row: 3;
-            margin-left: 55px;
+            grid-row: 3;            
             color: green;  
             }
         </style>
