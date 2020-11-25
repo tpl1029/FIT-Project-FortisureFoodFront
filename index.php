@@ -38,6 +38,7 @@
             <div class="trending-container-grid">
              <h1> Best Sellers: </h1>
              
+             
              <?php 
 
                 $colNum = 1;
