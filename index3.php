@@ -6,6 +6,8 @@
     include './Controller/db_conn.php';
     ?>
 
+    <h1>Check back soon for more information!</h1>
+
 <!-- Footer -->
 <?php
     include './View/footer.php';

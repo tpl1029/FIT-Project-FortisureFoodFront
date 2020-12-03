@@ -56,7 +56,7 @@
                         makeProductCard($prodID, $prodType, $prodName,  $prodDesc,  $prodPrice, $prodImage, $colNum);
                         $colNum++;
                     }
-            ?>
+            ?> 
             
 
                 <div class="deal-card">
