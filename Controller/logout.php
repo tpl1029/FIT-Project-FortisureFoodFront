@@ -24,5 +24,5 @@ echo"
      logout();
       </script>";
 
-header("Location:http://localhost/FIT-Web-Course/FIT-Project-FortisureFoodFront/index.php");
+header("Location:../index.php");
 ?>
